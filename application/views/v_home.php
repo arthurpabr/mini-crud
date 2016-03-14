@@ -16,7 +16,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="col-md-12">
 			<div class="row">
 				<?= anchor('cadastro/create', 'Novo Cadastro', array('class' => 'btn btn-success')); ?>
+				<?= anchor('exporta/export', 'Exportar para PDF', array('class' => 'btn btn-info')); ?>
 			</div>
+
+
+<script language="javascript" type="text/javascript">
+/* <![CDATA[ */
+      document.write('<a href="makepdf.php?url=' + encodeURIComponent(location.href) +'">');
+      document.write('Create PDF file of this page');
+      document.write('</a>');
+/* ]]> */
+</script>
+
+
 			<div class="row">
 				<h3><?= $cadastros->num_rows(); ?> registros(s)</h3>
 			</div>
